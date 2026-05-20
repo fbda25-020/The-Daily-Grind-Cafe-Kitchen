@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Grind Cafe + Kitchen | Feedback</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="favicon.png">
+</head>
+<body>
+    <!-- Navbar - Only 3 links on desktop + Hamburger -->
+<div class="navbar">
+    <button class="hamburger" onclick="toggleMobile()">☰</button>
+    
+    <a href="index.html" class="logo-text">The Daily Grind</a>
+    
+    <ul class="nav-links">
+        <!-- Only these 3 show on desktop -->
+        <li class="show-on-desktop"><a href="index.html">Home</a></li>
+        <li class="show-on-desktop"><a href="menu.html">Menu</a></li>
+        <li class="show-on-desktop"><a href="about.html">About</a></li>
+        
+        <!-- These stay hidden on desktop, appear in hamburger menu -->
+        <li><a href="order-reservations.html">Order &amp; Reservations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+</div>
+
+<!-- Floating circular logo -->
+<div class="logo-container">
+    <a href="index.html">
+        <img src="logo.png" alt="The Daily Grind Cafe + Kitchen" class="logo-img">
+    </a>
+</div>
+
+<!-- Mobile / Hamburger Overlay Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+    <a href="order-reservations.html">Order &amp; Reservations</a>
+    <a href="contact.html">Contact</a>
+    <a href="feedback.html">Feedback</a>
+</div>
+    <section style="padding-top:140px;">
+        <h2 class="section-title">Share Your Feedback</h2>
+        <div style="max-width:700px;margin:0 auto;background:white;padding:3rem;border-radius:24px;box-shadow:0 12px 35px rgba(0,0,0,0.1);">
+            <form>
+                <input type="text" placeholder="Your Name" style="width:100%;padding:14px;margin-bottom:1rem;border:2px solid #ddd;border-radius:12px;">
+                <select style="width:100%;padding:14px;margin-bottom:1rem;border:2px solid #ddd;border-radius:12px;">
+                    <option>Excellent ★★★★★</option>
+                    <option>Very Good ★★★★</option>
+                    <option> Average ★★★</option>
+                    <option>Below Average ★★</option>
+                    <option> Poor ★</option>
+                </select>
+                <textarea placeholder="Tell us what you loved or how we can improve..." rows="7" style="width:100%;padding:14px;margin-bottom:1rem;border:2px solid #ddd;border-radius:12px;"></textarea>
+                <button type="button" onclick="alert('Thank you for your feedback!')" style="width:100%;padding:16px;background:var(--accent);color:var(--primary);border:none;border-radius:50px;font-weight:700;">Submit Feedback</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col"><h3>The Daily Grind Cafe + Kitchen</h3><p>Independence Avenue<br>Gaborone, Botswana</p><p>+267 74 550 802<br>info@thedailygrindbw.com</p></div>
+            <div class="footer-col"><h3>Quick Links</h3><a href="feedback.html" style="display:block;margin:8px 0;color:#ddd;text-decoration:none;">Feedback</a></div>
+            <div class="footer-col"><h3>Hours</h3><p>Monday – Sunday<br>7:00 AM – 8:00 PM</p><p style="margin-top:1.5rem;font-size:0.9rem;">© 2026 The Daily Grind • All Rights Reserved</p></div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobile() { document.getElementById('mobileMenu').classList.toggle('active'); }
+    </script>
+    <script>
+    // Page load animation
+    window.addEventListener('load', () => {
+        document.body.classList.add('fade-in-page');
+    });
+
+    // Scroll reveal animation
+    function handleScrollAnimations() {
+        const elements = document.querySelectorAll('.animate-on-scroll');
+        elements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top <= window.innerHeight * 0.85) {
+                el.classList.add('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', handleScrollAnimations);
+    window.addEventListener('load', handleScrollAnimations); // initial check
+</script>
+</body>
+</html>

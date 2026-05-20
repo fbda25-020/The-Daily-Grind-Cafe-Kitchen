@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Grind Cafe + Kitchen | Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar (kept as per your previous request) -->
+    <div class="navbar">
+        <button class="hamburger" onclick="toggleMobile()">☰</button>
+        <a href="index.html" class="logo-text">The Daily Grind</a>
+        <ul class="nav-links">
+            <li class="show-on-desktop"><a href="index.html">Home</a></li>
+            <li class="show-on-desktop"><a href="menu.html">Menu</a></li>
+            <li class="show-on-desktop"><a href="about.html">About</a></li>
+            <li><a href="order-reservations.html">Order &amp; Reservations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </div>
+
+    <!-- Floating Logo -->
+    <div class="logo-container">
+        <a href="index.html">
+            <img src="logo.png" alt="The Daily Grind Cafe + Kitchen" class="logo-img">
+        </a>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="order-reservations.html">Order &amp; Reservations</a>
+        <a href="contact.html">Contact</a>
+        <a href="feedback.html">Feedback</a>
+    </div>
+
+    <!-- Slideshow Hero (kept as requested) -->
+    <div class="slideshow-container">
+        <div class="slide active" style="background-image: url(Iced\ matcha.png);"></div>
+        <div class="slide" style="background-image: url(Fried\ Fish\ and\ Chips.jpg);"></div>
+        <div class="slide" style="background-image: url(Avocado\ Smash\ Bowl.jpg);"></div>
+        <div class="slide" style="background-image: url(Botswana\ Beef\ steak.jpg);"></div>
+        <div class="slide" style="background-image: url(Cocktails.jpg);"></div>
+    </div>
+
+    <!-- Hero Content Overlay - Matching Wireframe -->
+    <div class="hero-content">
+        <h1>Happiness at The Daily Grind</h1>
+        <p>Craft your day. One honest plate at a time.</p>
+        <div style="margin-top: 2rem;">
+            <a href="menu.html" class="btn btn-primary">Explore Our Menu</a>
+            <a href="order-reservations.html" class="btn btn-outline">Reserve Your Table</a>
+        </div>
+    </div>
+
+    <!-- Slideshow Dots -->
+    <div class="slideshow-dots">
+        <div class="dot active" onclick="currentSlide(0)"></div>
+        <div class="dot" onclick="currentSlide(1)"></div>
+        <div class="dot" onclick="currentSlide(2)"></div>
+        <div class="dot" onclick="currentSlide(3)"></div>
+        <div class="dot" onclick="currentSlide(4)"></div>
+    </div>
+
+    <!-- SIGNATURE MEALS SECTION - Matching Wireframe -->
+    <section>
+        <h2 class="section-title">SIGNATURE MEALS</h2>
+        <div class="card-grid">
+            <div class="card animate-on-scroll">
+                <img src="Breakfast sandwich.png" alt="TDG Breakfast Bun">
+                <div class="card-body">
+                    <p style="font-size:0.9rem; color:#666; margin-bottom:8px;">BREAKFAST</p>
+                    <h3>TDG Breakfast Bun</h3>
+                </div>
+            </div>
+            <div class="card animate-on-scroll">
+                <img src="Avocado Smash Bowl.jpg"alt="Avocado Smash Bowl">
+                <div class="card-body">
+                    <p style="font-size:0.9rem; color:#666; margin-bottom:8px;">HEALTHY CHOICE</p>
+                    <h3>Avocado Smash Bowl</h3>
+                </div>
+            </div>
+            <div class="card animate-on-scroll">
+                <img src="Botswana Beef steak.jpg" alt="Botswana Beef Steak">
+                <div class="card-body">
+                    <p style="font-size:0.9rem; color:#666; margin-bottom:8px;">MAIN COURSE</p>
+                    <h3>Botswana Beef Steak</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Team Section -->
+    <section style="background:#F8F8F8;">
+        <div style="max-width:1280px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
+            <div>
+                <h2 class="section-title" style="text-align:left;">Meet the team</h2>
+                <p>Founded on the principles of culinary excellence and community connection, The Daily Grind started as a small dream in the heart of the city.</p>
+                <p style="margin-top:1.5rem;">Our kitchen is led by a diverse team of chefs who bring global perspectives to local ingredients. We believe that every plate tells a story, and our team is here to ensure yours is unforgettable.</p>
+                <p style="margin-top:1.5rem;">From our baristas to our head chefs, every member of The Daily Grind family is committed to providing an exceptional dining experience that feels like home, every single day.</p>
+            </div>
+            <div>
+                <img src="Meet the team 2.png" alt="The Daily Grind Team" 
+                     style="width:100%; border-radius:12px; box-shadow:0 15px 35px rgba(0,0,0,0.15);">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>The Daily Grind</h3>
+                <p>Independence Avenue<br>Gaborone, Botswana</p>
+                <p>+267 74 550 802<br>info@thedailygrindbw.com</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <a href="menu.html">Menu</a><br>
+                <a href="order-reservations.html">Order and reservations</a><br>
+                <a href="about.html">Our Story</a>
+            </div>
+            <div class="footer-col">
+                <h3>Hours</h3>
+                <p>Monday – Sunday<br>7:00 AM – 8:00 PM</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Slideshow + Mobile Menu + Animations
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+            dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+            currentIndex = index;
+        }
+
+        function nextSlide() { showSlide((currentIndex + 1) % slides.length); }
+        function currentSlide(index) { showSlide(index); }
+
+        let slideInterval = setInterval(nextSlide, 5500);
+        const slideshow = document.querySelector('.slideshow-container');
+        slideshow.addEventListener('mouseenter', () => clearInterval(slideInterval));
+        slideshow.addEventListener('mouseleave', () => slideInterval = setInterval(nextSlide, 5500));
+
+        function toggleMobile() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+
+        // Animations
+        window.addEventListener('load', () => {
+            document.body.classList.add('fade-in-page');
+        });
+
+        function handleScrollAnimations() {
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                if (el.getBoundingClientRect().top <= window.innerHeight * 0.85) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScrollAnimations);
+        window.addEventListener('load', handleScrollAnimations);
+
+        showSlide(0);
+    </script>
+</body>
+</html>

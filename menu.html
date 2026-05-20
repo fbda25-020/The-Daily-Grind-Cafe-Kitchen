@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Grind Cafe + Kitchen | Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="favicon.png">
+</head>
+<body>
+    <!-- Navbar - Only 3 links on desktop + Hamburger -->
+<div class="navbar">
+    <button class="hamburger" onclick="toggleMobile()">☰</button>
+    
+    <a href="index.html" class="logo-text">The Daily Grind</a>
+    
+    <ul class="nav-links">
+        <!-- Only these 3 show on desktop -->
+        <li class="show-on-desktop"><a href="index.html">Home</a></li>
+        <li class="show-on-desktop"><a href="menu.html">Menu</a></li>
+        <li class="show-on-desktop"><a href="about.html">About</a></li>
+        
+        <!-- These stay hidden on desktop, appear in hamburger menu -->
+        <li><a href="order-reservations.html">Order &amp; Reservations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+</div>
+
+<!-- Floating circular logo -->
+<div class="logo-container">
+    <a href="index.html">
+        <img src="logo.png" alt="The Daily Grind Cafe + Kitchen" class="logo-img">
+    </a>
+</div>
+
+<!-- Mobile / Hamburger Overlay Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+    <a href="order-reservations.html">Order &amp; Reservations</a>
+    <a href="contact.html">Contact</a>
+    <a href="feedback.html">Feedback</a>
+</div>
+
+    <section style="padding-top:140px;">
+        <h2 class="section-title">Our Menu</h2>
+
+        <!-- BREAKFAST -->
+        <div class="menu-section" id="breakfast">
+            <h1 style="text-align:center;margin-bottom:2rem;color:var(--primary);">Breakfast</h1>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="Breakfast sandwich.png" alt="Breakfast Bun">
+                    <div class="card-body">
+                        <h3>TDG Breakfast Bun</h3>
+                        <p>Crispy bacon, fried egg, cheddar, tomato &amp; rocket on toasted bun</p>
+                        <div><span class="tag">Popular</span></div>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P99</p>
+                        <button onclick="addToCart(this, 'TDG Breakfast Bun', 99)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Avocado Smash Bowl.jpg" alt="Avocado">
+                    <div class="card-body">
+                        <h3>Avocado Smash Bowl</h3>
+                        <p>Smashed avocado, poached eggs, feta,lettuce, rice  cherry tomatoesS</p>
+                        <div><span class="tag">Vegan Option</span></div>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P110</p>
+                        <button onclick="addToCart(this, ' Avocado Smash Bowl', 110)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Botswana Omelete.jpg" alt="Omelette">
+                    <div class="card-body">
+                        <h3>Botswana Omelette</h3>
+                        <p>Three egg omelette stufeed with  spinach, mushrooms and steak strips</p>
+                        <div><span class="tag">Local</span></div>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P85</p>
+                        <button onclick="addToCart(this, 'Botswana Omelette', 85)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="ButterMilk Pancakes.png" alt="Pancakes">
+                    <div class="card-body">
+                        <h3>Buttermilk Bacon Pancakes</h3>
+                        <p>With bacon,fried plantain on top banana on the side &amp; maple syrup</p>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P98</p>
+                        <button onclick="addToCart(this, 'Buttermilk Pancakes', 98)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Chia Pudding Parfait.jpg" alt="Chia">
+                    <div class="card-body">
+                        <h3>Chia Pudding Parfait</h3>
+                        <p>Chia seeds, fresh mango, granola &amp; honey</p>
+                        <div><span class="tag">Vegan</span></div>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P70.65</p>
+                        <button onclick="addToCart(this, 'Chia Pudding Parfait', 75.65)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="British Fast Breaker.png" alt="Full English">
+                    <div class="card-body">
+                        <h3>British Fast Breaker</h3>
+                        <p>Sausage, eggs, bacon, baked beans &amp; Blood pudding optional</p>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P135</p>
+                        <button onclick="addToCart(this, 'British Fast Breaker', 135)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Smoked salmon bagel.jpg" alt="Bagel">
+                    <div class="card-body">
+                        <h3>Smoked Salmon Bagel</h3>
+                        <p>Cream cheese,local sourced fresh salmon, capers, red onion and lettuce</p>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P95</p>
+                        <button onclick="addToCart(this, 'Smoked Salmon Bagel', 95)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Vanilla Cream Oats.png" alt="Oats">
+                    <div class="card-body">
+                        <h3>Vanilla Cream Oats</h3>
+                        <p>Vanilla cream oats with chia and pumpkin seeds topped with rasberry jam.</p>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P84.50</p>
+                        <button onclick="addToCart(this, 'Vanilla Cream Oats', 84.50)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                  <div class="card">
+                    <img src="Waffle and chicken strips.png" alt="Bagel">
+                    <div class="card-body">
+                        <h3>Waffle and Chicken Strips</h3>
+                        <p>Cloud Fluffy waffles with crispy chicken strips and a side of honey.</p>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P105.75</p>
+                        <button onclick="addToCart(this, 'Waffle and Chicken Strips', 105.75)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LUNCHES -->
+        <div class="menu-section" id="lunch">
+            <h1 style="text-align:center;margin-bottom:2rem;color:var(--primary);">Lunches</h1>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="Botswana Beef steak.jpg" alt="Beef Bowl">
+                    <div class="card-body">
+                        <h3>King Beef meal</h3>
+                        <p>Grilled ribeye, fries &amp; chimichurri</p>
+                        <div><span class="tag">Popular</span><span class="tag">Local</span></div>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P145</p>
+                        <button onclick="addToCart(this, 'King Beef meal', 145)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Quina Power Salad.jpg" alt="Quinoa">
+                    <div class="card-body">
+                        <h3>Quinoa Power Salad</h3>
+                        <p>Quinoa, grilled halloumi, pomegranate, walnuts &amp; honey dressing</p>
+                        <div><span class="tag">Veg</span></div>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P98.50</p>
+                        <button onclick="addToCart(this, 'Quinoa Power Salad', 98.50)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Chicken Sharwama rap.jpg" alt="Chicken Wrap">
+                    <div class="card-body">
+                        <h3>Chicken Shawarma Wrap</h3>
+                        <p>With tzatziki sauce &amp; pickled red cabbage</p>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P45.99</p>
+                        <button onclick="addToCart(this, 'Chicken Shawarma Wrap', 45.99)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Veggie Falafel Bowl.jpg" alt="Falafel">
+                    <div class="card-body">
+                        <h3>Veggie Falafel Bowl</h3>
+                        <p>Falafel, hummus, tabbouleh &amp; tahini</p>
+                        <div><span class="tag">Vegan</span></div>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P92.80</p>
+                        <button onclick="addToCart(this, 'Veggie Falafel Bowl', 92.80)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Fried Fish and Chips.jpg" alt="Fish">
+                    <div class="card-body">
+                        <h3> Fried Fish &amp; Chips</h3>
+                        <p>Local bream, hand-cut chips, tartar sauce</p>
+                        <div><span class="tag">Local</span></div>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P138</p>
+                        <button onclick="addToCart(this, 'Fried Fish & Chips', 138)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Classic Beef Burger.jpg" alt="Beef Burger">
+                    <div class="card-body">
+                        <h3>Classic Beef Burger</h3>
+                        <p>With cheese, tomato, lettuce &amp; secret sauce</p>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P120</p>
+                        <button onclick="addToCart(this, 'Classic Beef Burger', 120)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PASTRIES & SNACKS -->
+        <div class="menu-section" id="pastry">
+            <h1 style="text-align:center;margin-bottom:2rem;color:var(--primary);">Pastries &amp; Snacks</h1>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="Chocolate Croissants.jpg" alt="Croissant">
+                    <div class="card-body">
+                        <h3>Choco Croissant</h3>
+                        <p> have a taste of France with freshly baked croissants daily with chocolate filling</p>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P30</p>
+                        <button onclick="addToCart(this, 'Choco Croissant', 30)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Croissant love.jpg" alt="Pain au Chocolat">
+                    <div class="card-body">
+                        <h3>Berry Blaze Croissant</h3>
+                        <p>Belgian chocolate filled croissant</p>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P33</p>
+                        <button onclick="addToCart(this, 'Berry Blaze Croissant', 33)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Banana bread.jpg" alt="Banana Bread">
+                    <div class="card-body">
+                        <h3>Banana Bread Slice</h3>
+                        <p>With walnuts &amp; cinnamon butter</p>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P20</p>
+                        <button onclick="addToCart(this, 'Banana Bread Slice', 20)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Crispy Chocolate Chip Waffles.jpg" alt="Muffin">
+                    <div class="card-body">
+                        <h3>Chocolate chip waffles</h3>
+                        <p>Waffles with chocolate chips &amp; honey butter </p>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P45</p>
+                        <button onclick="addToCart(this, 'Chocolate chip waffles', 45)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Key Lime Pie Slice.jpg" alt="Scone">
+                    <div class="card-body">
+                        <h3>Key lime Pie</h3>
+                        <p>Served with Lime ice cream</p>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P50</p>
+                        <button onclick="addToCart(this, 'Key lime Pie', 50)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                    <div class="card">
+                    <img src="Choco cake.png" alt="Scone">
+                    <div class="card-body">
+                        <h3>Chocolate Cake</h3>
+                        <p>Rich chocolate cake with cream chocolate frosting</p>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P50</p>
+                        <button onclick="addToCart(this, 'Chocolate Cake', 50)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BEVERAGES -->
+        <div class="menu-section" id="beverage">
+            <h1 style="text-align:center;margin-bottom:2rem;color:var(--primary);">Beverages</h1>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="Caramel Latte.png" alt="Caramel Latte">
+                    <div class="card-body">
+                        <h3>Caramel Latte</h3>
+                        <p>Double espresso, steamed milk &amp; house caramel</p>
+                        <div><span class="tag">Signature</span></div>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P65</p>
+                        <button onclick="addToCart(this, 'Caramel Latte', 65)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Matcha Latte.png" alt="Matcha Latte">
+                    <div class="card-body">
+                        <h3>Matcha Latte</h3>
+                        <p>Single origin, bright &amp; floral notes</p>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P55</p>
+                        <button onclick="addToCart(this, 'Matcha Latte', 55)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Classic Cuppaccino.jpg" alt="Cappuccino">
+                    <div class="card-body">
+                        <h3>Classic Cappuccino</h3>
+                        <p>Rich espresso with velvety foam</p>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P60.40</p>
+                        <button onclick="addToCart(this, 'Classic Cappuccino', 60.40)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Spiced Chai Latte.png" alt="Chai">
+                    <div class="card-body">
+                        <h3>Spiced Chai Latte</h3>
+                        <p>House-made chai with steamed milk</p>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P58.50</p>
+                        <button onclick="addToCart(this, 'Spiced Chai Latte', 58.50)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Iced Americano.png" alt="Iced">
+                    <div class="card-body">
+                        <h3>Iced Americano</h3>
+                        <p>Double espresso over ice</p>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P50</p>
+                        <button onclick="addToCart(this, 'Iced Americano', 50)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Berry Blaze Smoothie.png" alt="Berry Blaze Smoothie">
+                    <div class="card-body">
+                        <h3>Berry Blaze Smoothie</h3>
+                        <p>Blueberry, strawberry & grape blend</p>
+                        <div><span class="tag">Vegan</span></div>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P68</p>
+                        <button onclick="addToCart(this, 'Berry Blaze Smoothie', 68)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Assorted milkshakes.jpg" alt="Milkshake">
+                    <div class="card-body">
+                        <h3>Assorted milky frappé milkshakes</h3>
+                        <p> "Crave something creamy? Dive into our range of loaded frappé milkshakes</p>
+                        <div><span class="tag">Decadent, sweet, and treat-yourself </span></div>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P47</p>
+                        <button onclick="addToCart(this, 'Assorted Milkshakes', 47)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Watermelon Mint Refresher.jpg" alt="Watermelon Mint Refresher">
+                    <div class="card-body">
+                        <h3>Watermelon Mint Refresher</h3>
+                        <p>Watermelon Juice mixed with sprite and dashed with lemon juice</p>
+                        <div><span class="tag">Refreshingly cool mojito</span></div>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P65.60</p>
+                        <button onclick="addToCart(this, 'Watermelon Mint Refresher', 65.60)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Fizzy Drinks.jpg" alt="Fizzy Drinks">
+                    <div class="card-body">
+                        <h3> Assorted Fizzy Drinks</h3>
+                        <p> Fanta, Sprite, Coke and Pepsi, pick your pick!</p>
+                        <div><span class="tag">served ice-cold </span></div>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P20.60</p>
+                        <button onclick="addToCart(this, 'Fizzy Drinks', 20.60)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Cocktails.jpg" alt="Cocktail">
+                    <div class="card-body">
+                        <h3>Assorted Cocktails</h3>
+                        <p>"Beat the heat with our signature layered cocktails!</p>
+                        <div><span class="tag">Fun, icy, and refreshing.</span></div>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P38</p>
+                        <button onclick="addToCart(this, 'Assorted Cocktails', 38)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="champange.png" alt="Champange">
+                    <div class="card-body">
+                        <h3>Chill Champange</h3>
+                        <p>Simonsig Champange from the vineyards of Capetown</p>
+                        <div><span class="tag">Vegan</span></div>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P70.99</p>
+                        <button onclick="addToCart(this, 'Chill Champange', 70.99)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Juices!.jpg" alt="Juice">
+                    <div class="card-body">
+                        <h3> Assorted Juices!</h3>
+                        <p>Fresh, healthy, and tasty.</p>
+                        <div><span class="tag">Start your morning with a burst of nature</span></div>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P28</p>
+                        <button onclick="addToCart(this, 'Juices!', 28)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SPECIAL OFFERS -->
+        <div class="menu-section" id="special">
+            <h1 style="text-align:center;margin-bottom:2rem;color:var(--primary);">Special Offers</h1>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="Greece Greek salad.png" alt="Combo">
+                    <div class="card-body">
+                        <h3>Breakfast </h3>
+                        <p>Greece Greek Salad</p>
+                        <div><span class="tag">Save P20, Spend P80</span></div>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P79.99</p>
+                        <button onclick="addToCart(this, 'Greece Greek Salad', 79.99)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="lunch deal.jpg" alt="Lunch Deal">
+                    <div class="card-body">
+                        <h3>Lunch Deal</h3>
+                        <p>Any main + side +  assorted fizzy drink</p>
+                        <div><span class="tag">Save P30, Spend P150</span></div>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P150</p>
+                        <button onclick="addToCart(this, 'Lunch Deal', 150)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Pastry plus hot drink.jpg" alt="Pastry Deal">
+                    <div class="card-body">
+                        <h3>Pastry &amp; Coffee Deal</h3>
+                        <p>Any pastry + any hot drink</p>
+                        <div><span class="tag">Save P15</span></div>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P85</p>
+                        <button onclick="addToCart(this, 'Pastry & Coffee Deal', 85)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SIDE DISHES -->
+        <div class="menu-section" id="side">
+            <h1 style="text-align:center;margin-bottom:2rem;color:var(--primary);">Side Dishes</h1>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="Fries.jpg" alt="Fries">
+                    <div class="card-body">
+                        <h3>French Fries</h3>
+                        <p>With peri-peri seasoning tomato sauce and ranch dressing</p>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P25.25</p>
+                        <button onclick="addToCart(this, 'French Fries', 25.25)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Green salad.jpg" alt="Salad">
+                    <div class="card-body">
+                        <h3>Side Green Salad</h3>
+                        <p>Fresh greens, cherry tomatoes &amp; vinaigrette</p>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P42</p>
+                        <button onclick="addToCart(this, 'Side Green Salad', 42)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Creamed spinach.jpg" alt="Morogo">
+                    <div class="card-body">
+                        <h3>Wild Creamy Spinach</h3>
+                        <p>Traditional Botswana style</p>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P38</p>
+                        <button onclick="addToCart(this, 'Wild Spinach (Morogo)', 38)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Plantain ships.jpg" alt=" Plantain Chips">
+                    <div class="card-body">
+                        <h3>Plantain Chips</h3>
+                        <p>Lightly salted</p>
+                        <p style="font-size:1.6rem;color:#00A8E8;margin-top:10px;">P32</p>
+                        <button onclick="addToCart(this, 'Plantain Chips', 32)" 
+        style="margin-top:12px;width:100%;padding:12px;border-radius:50px;background:var(--accent);color:var(--primary);border:none;font-weight:700;">
+    Add to Order
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col"><h3>The Daily Grind Cafe + Kitchen</h3><p>Independence Avenue<br>Gaborone, Botswana</p><p>+267 74 550 802<br>info@thedailygrindbw.com</p></div>
+            <div class="footer-col"><h3>Quick Links</h3><a href="order-reservations.html" style="display:block;margin:8px 0;color:#ddd;text-decoration:none;">Order & Reservations</a></div>
+            <div class="footer-col"><h3>Hours</h3><p>Monday – Sunday<br>7:00 AM – 8:00 PM</p><p style="margin-top:1.5rem;font-size:0.9rem;">© 2026 The Daily Grind • All Rights Reserved</p></div>
+        </div>
+    </footer>
+
+    <script> 
+    function toggleMobile() {
+        document.getElementById('mobileMenu').classList.toggle('active');
+    }
+
+    function filterCategory(cat) {
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        document.querySelectorAll('.menu-section').forEach(section => {
+            if (cat === 'all') {
+                section.style.display = 'block';
+            } else {
+                section.style.display = section.id === cat ? 'block' : 'none';
+            }
+        });
+    }
+
+    // === ADD TO CART FUNCTION ===
+    function addToCart(btn, itemName, price) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+        cart.push({
+            name: itemName,
+            price: parseFloat(price)
+        });
+        
+        localStorage.setItem('cart', JSON.stringify(cart));
+        
+        // POST FEEDBACK
+        const originalText = btn.textContent;
+        btn.textContent = '✅ Added!';
+        btn.style.background = '#111111';
+        btn.style.color = 'white';
+        
+        setTimeout(() => {
+            btn.textContent = originalText;
+            btn.style.background = 'var(--accent)';
+            btn.style.color = 'var(--primary)';
+        }, 1500);
+    }
+    </script>
+    <script>
+    // Page load animation
+    window.addEventListener('load', () => {
+        document.body.classList.add('fade-in-page');
+    });
+
+   
+    
+
+  
+</script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Grind Cafe + Kitchen | Order &amp; Reservations</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="favicon.png">
+</head>
+<body>
+    <!-- Navbar - Only 3 links on desktop + Hamburger -->
+<div class="navbar">
+    <button class="hamburger" onclick="toggleMobile()">☰</button>
+    
+    <a href="index.html" class="logo-text">The Daily Grind</a>
+    
+    <ul class="nav-links">
+        <!-- Only these 3 show on desktop -->
+        <li class="show-on-desktop"><a href="index.html">Home</a></li>
+        <li class="show-on-desktop"><a href="menu.html">Menu</a></li>
+        <li class="show-on-desktop"><a href="about.html">About</a></li>
+        
+        <!-- These stay hidden on desktop, appear in hamburger menu -->
+        <li><a href="order-reservations.html">Order &amp; Reservations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+</div>
+
+<!-- Floating circular logo -->
+<div class="logo-container">
+    <a href="index.html">
+        <img src="logo.png" alt="The Daily Grind Cafe + Kitchen" class="logo-img">
+    </a>
+</div>
+
+<!-- Mobile / Hamburger Overlay Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+    <a href="order-reservations.html">Order &amp; Reservations</a>
+    <a href="contact.html">Contact</a>
+    <a href="feedback.html">Feedback</a>
+</div>
+
+    <section style="padding-top:120px;">
+        <section style="padding-top:80px;">
+    <h2 class="section-title">Your Current Order</h2>
+    
+    <div id="cart-items" style="max-width:1000px;margin:0 auto;background:white;padding:2rem;border-radius:24px;box-shadow:0 12px 35px rgb(0, 0, 0);min-height:300px;">
+        
+    </div>
+
+    <div style="max-width:800px;margin:30px auto;text-align:right;">
+        <p class="cart-total" id="cart-total" style="font-size:1.4rem;font-weight:700;color:#00A8E8;">Total: P0</p>
+        <button onclick="clearCart()" style="margin-top:15px;padding:14px 32px;border-radius:50px;background:#111;color:white;border:none;font-weight:700;">Clear Cart</button>
+    </div>
+</section>
+            <div style="background:white;padding:2.5rem;border-radius:24px;box-shadow:0 12px 35px rgba(0,0,0,0.1);">
+                <h3 style="margin-bottom:1.5rem;color:var(--accent);">Reserve a Table</h3>
+                <form>
+                    <input type="date" style="width:100%;padding:14px;margin-bottom:1rem;border:2px solid #ddd;border-radius:12px;">
+                    <select style="width:100%;padding:14px;margin-bottom:1rem;border:2px solid #ddd;border-radius:12px;">
+                        <option>7:00 AM</option><option>12:00 PM</option><option>6:00 PM</option>
+                    </select>
+                    <input type="number" placeholder="Number of guests" value="2" style="width:100%;padding:14px;margin-bottom:1rem;border:2px solid #ddd;border-radius:12px;">
+                    <button type="button" onclick="alert('Table reserved!')" style="width:100%;padding:16px;background:var(--accent);color:var(--primary);border:none;border-radius:50px;font-weight:700;">Reserve Table</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col"><h3>The Daily Grind Cafe + Kitchen</h3><p>Independence Avenue<br>Gaborone, Botswana</p><p>+267 74 550 802<br>info@thedailygrindbw.com</p></div>
+            <div class="footer-col"><h3>Quick Links</h3><a href="order-reservations.html" style="display:block;margin:8px 0;color:#ddd;text-decoration:none;">Order &amp; Reservations</a></div>
+            <div class="footer-col"><h3>Hours</h3><p>Monday – Sunday<br>7:00 AM – 8:00 PM</p><p style="margin-top:1.5rem;font-size:0.9rem;">© 2026 The Daily Grind • All Rights Reserved</p></div>
+        </div>
+    </footer>
+
+    <script>
+    function toggleMobile() {
+        document.getElementById('mobileMenu').classList.toggle('active');
+    }
+
+    function loadCart() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const container = document.getElementById('cart-items');
+        let total = 0;
+
+        if (cart.length === 0) {
+            container.innerHTML = '<p style="text-align:center;padding:40px;color:#888;">Your cart is empty.<br>Go to Menu to add items.</p>';
+            document.getElementById('cart-total').textContent = 'Total: P0';
+            return;
+        }
+
+        let html = '';
+        cart.forEach(item => {
+            html += `
+                <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #eee;">
+                    <span>${item.name}</span>
+                    <span style="color:#00A8E8;">P${item.price}</span>
+                </div>
+            `;
+            total += item.price;
+        });
+
+        container.innerHTML = html;
+        document.getElementById('cart-total').textContent = `Total: P${total}`;
+    }
+
+    function clearCart() {
+        if (confirm('Clear the entire cart?')) {
+            localStorage.removeItem('cart');
+            loadCart();
+        }
+    }
+
+    // Load cart when page opens
+    window.onload = loadCart;
+</script>
+<script>
+    // Page load animation
+    window.addEventListener('load', () => {
+        document.body.classList.add('fade-in-page');
+    });
+
+    // Scroll reveal animation
+    function handleScrollAnimations() {
+        const elements = document.querySelectorAll('.animate-on-scroll');
+        elements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top <= window.innerHeight * 0.85) {
+                el.classList.add('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', handleScrollAnimations);
+    window.addEventListener('load', handleScrollAnimations); // initial check
+</script>
+</body>
+</html>

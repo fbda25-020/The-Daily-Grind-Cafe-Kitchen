@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Grind Cafe + Kitchen | About</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="favicon.png">
+</head>
+<body>
+    <!-- Navbar - Only 3 links on desktop + Hamburger -->
+<div class="navbar">
+    <button class="hamburger" onclick="toggleMobile()">☰</button>
+    
+    <a href="index.html" class="logo-text">The Daily Grind</a>
+    
+    <ul class="nav-links">
+        <!-- Only these 3 show on desktop -->
+        <li class="show-on-desktop"><a href="index.html">Home</a></li>
+        <li class="show-on-desktop"><a href="menu.html">Menu</a></li>
+        <li class="show-on-desktop"><a href="about.html">About</a></li>
+        
+        <!-- These stay hidden on desktop, appear in hamburger menu -->
+        <li><a href="order-reservations.html">Order &amp; Reservations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+</div>
+
+<!-- Floating circular logo -->
+<div class="logo-container">
+    <a href="index.html">
+        <img src="logo.png" alt="The Daily Grind Cafe + Kitchen" class="logo-img">
+    </a>
+</div>
+
+<!-- Mobile / Hamburger Overlay Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+    <a href="order-reservations.html">Order &amp; Reservations</a>
+    <a href="contact.html">Contact</a>
+    <a href="feedback.html">Feedback</a>
+</div>
+
+<section class="animate-on-scroll">
+    <section style="padding-top:140px;background:translucent;">
+        <h2 class="section-title">Our Story</h2>
+        <div style="max-width:1000px;margin:0 auto;text-align:center;font-size:1.25rem;line-height:1.9;">
+            <p>Welcome to The Daily Grind Cafe & Kitchen, where vibrant energy meets the comforting ritual of a perfect brew.
+                Our journey began with a simple vision: to create a space that balances the fast-paced hustle of life with the warmth of a home kitchen. We wanted to build more than just a place to grab a quick caffeine fix; we envisioned a sanctuary for the early risers, the creative thinkers, and the midday dreamers a place where quality ingredients and genuine community intersect.</p>
+            <p style="margin-top:2rem;">The "Daily Grind" isn't just about the coffee it's about the dedication we pour into every plate. We believe that great food should be honest and approachable. That is why our kitchen focuses on fresh, seasonal flavors and hearty meals that fuel your day, whether you’re here for a focused work session or a slow weekend brunch with friends.</p>
+             <p style="margin-top:2rem;">In a world that’s always moving, we invite you to pause. Our cafe is designed to be your "third space" ,the one between work and home. From the rich aroma of our signature roasts to the friendly faces behind the counter, every detail is crafted to make you feel like you belong.Thank you for making us a chapter in your daily routine. Let’s keep grinding, one cup at a time.</p>
+        </div>
+    </section>
+
+    <section style="background:#F8F8F8;">
+        <h2 class="section-title">Our Values</h2>
+        <div class="card-grid">
+            <div class="card"><div class="card-body"><h3>Freshness</h3><p>Beans roasted weekly. Bread baked daily.</p></div></div>
+            <div class="card"><div class="card-body"><h3>Community</h3><p>Supporting local farmers and employing passionate Batswana.</p></div></div>
+            <div class="card"><div class="card-body"><h3>Hospitality</h3><p>Every guest is family.</p></div></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col"><h3>The Daily Grind Cafe + Kitchen</h3><p>Independence Avenue<br>Gaborone, Botswana</p><p>+267 74 550 802<br>info@thedailygrindbw.com</p></div>
+            <div class="footer-col"><h3>Quick Links</h3><a href="menu.html" style="display:block;margin:8px 0;color:#ddd;text-decoration:none;">Menu</a></div>
+            <div class="footer-col"><h3>Hours</h3><p>Monday – Sunday<br>7:00 AM – 8:00 PM</p><p style="margin-top:2.0rem;font-size:0.9rem;">© 2026 The Daily Grind • All Rights Reserved</p></div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobile() { document.getElementById('mobileMenu').classList.toggle('active'); }
+    </script>
+    <script>
+    // Page load animation
+    window.addEventListener('load', () => {
+        document.body.classList.add('fade-in-page');
+    });
+
+    // Scroll reveal animation
+    function handleScrollAnimations() {
+        const elements = document.querySelectorAll('.animate-on-scroll');
+        elements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top <= window.innerHeight * 0.85) {
+                el.classList.add('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', handleScrollAnimations);
+    window.addEventListener('load', handleScrollAnimations); // initial check
+</script>
+</body>
+</html>
